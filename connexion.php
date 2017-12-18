@@ -9,7 +9,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=e4;charset=utf8', 'root', '');
       if($login&&$mdp)
        {
 
-            $requser = $bdd->prepare("SELECT * FROM connexion WHERE login = ? AND mdp = ? ");
+            $requser = $bdd->prepare("SELECT * FROM connexion,droits WHERE droits.id_droit= connexion.id_droit AND login = ? AND mdp = ? ");
             $requser -> execute(array($login, $mdp));
             $userexist = $requser -> rowCount();
             $userinfo = $requser -> fetch();
@@ -17,6 +17,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=e4;charset=utf8', 'root', '');
               {
               	$_SESSION['login']=$userinfo['login'];
                 $_SESSION['idConnexion']=$userinfo['idConnexion'];
+                $_SESSION['idDroit']=$userinfo['idDroit'];
                 header("Location: test.php");
 
               }
@@ -27,3 +28,4 @@ $bdd = new PDO('mysql:host=localhost;dbname=e4;charset=utf8', 'root', '');
         } 
 
   }
+  ?>
