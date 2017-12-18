@@ -32,7 +32,7 @@ if ($_SESSION['idConnexion']!=0){
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="profil.php">Votre profil</a></li>
+            <li><a href="profil.php?id=<?php echo $_SESSION['id_connexion']; ?>">Votre profil</a></li>
             <li><a href="deconnexion.php">Déconnexion</a></li>
           </ul>
         </li>
