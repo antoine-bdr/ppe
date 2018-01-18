@@ -11,24 +11,23 @@
         <title>Projet PPE</title>
     </head>
 <body>
-<<<<<<< HEAD
+
   <!-- Menu des pages-->
-=======
+
   <!-- Menu de la page -->
->>>>>>> 216d1d4fc612ea17c71ee62e3850b5ebca913745
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Cash Cash</a>
     </div>
       <ul class="nav navbar-nav">
-<<<<<<< HEAD
+
        <?php
          if ($_SESSION['id_droit'] == 3 || $_SESSION['id_droit'] == 1) {
          ?>
-=======
+
        
->>>>>>> 216d1d4fc612ea17c71ee62e3850b5ebca913745
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fiche client
           <span class="caret"></span></a>
@@ -42,7 +41,6 @@
         <li><a href="#">Statistiques</a></li>
       </ul>
 
-<<<<<<< HEAD
 
         <ul class="nav navbar-nav">
        <?php
@@ -54,8 +52,7 @@
         </li>
       </ul>
 
-=======
->>>>>>> 216d1d4fc612ea17c71ee62e3850b5ebca913745
+
       <ul class="nav navbar-nav navbar-right">  
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil
