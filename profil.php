@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 216d1d4fc612ea17c71ee62e3850b5ebca913745
 <?php
 session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=e4;charset=utf8', 'root', ''); //connection à la bdd

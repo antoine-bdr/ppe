@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['idConnexion']!=0){
-<<<<<<< HEAD
+
 ?>
 <html>
     <head>
