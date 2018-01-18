@@ -47,10 +47,9 @@ if ($_SESSION['idConnexion']!=0){
     <script src="/www/js/bootstrap.min.js"></script>
 </html>
 <?php
-=======
+
   include('menu.php');
 
->>>>>>> ee1e6544d4d526e2cfda6e74879e1a87f50f072a
 }else{
   header("Location: index.php");
 }
