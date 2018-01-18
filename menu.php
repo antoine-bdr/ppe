@@ -1,8 +1,3 @@
-<?php
-session_start();
-if ($_SESSION['idConnexion']!=0){
-<<<<<<< HEAD
-?>
 <html>
     <head>
         <!-- En-tête de la page -->
@@ -20,20 +15,29 @@ if ($_SESSION['idConnexion']!=0){
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cash	Cash</a>
+      <a class="navbar-brand" href="#">Cash Cash</a>
     </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Accueil</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
+       
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fiche client
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="rechercheclient.php">Rechercher une fiche client</a></li>
+            <li><a href="listeclient.php">Liste des clients</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Liste des visites</a></li>
+        <li><a href="#">Interventions</a></li>
+        <li><a href="#">Statistiques</a></li>
       </ul>
-      <!-- Menu déroulant -->
+
       <ul class="nav navbar-nav navbar-right">  
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="profil.php?id=<?php echo $_SESSION['id_connexion']; ?>">Votre profil</a></li>
+            <li><a href="profil.php">Votre profil</a></li>
             <li><a href="deconnexion.php">Déconnexion</a></li>
           </ul>
         </li>
@@ -46,12 +50,3 @@ if ($_SESSION['idConnexion']!=0){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/www/js/bootstrap.min.js"></script>
 </html>
-<?php
-=======
-  include('menu.php');
-
->>>>>>> ee1e6544d4d526e2cfda6e74879e1a87f50f072a
-}else{
-  header("Location: index.php");
-}
-?>

@@ -1,7 +1,6 @@
 <?php
 session_start();
 if ($_SESSION['idConnexion']!=0){
-<<<<<<< HEAD
 ?>
 <html>
     <head>
@@ -33,7 +32,7 @@ if ($_SESSION['idConnexion']!=0){
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="profil.php?id=<?php echo $_SESSION['id_connexion']; ?>">Votre profil</a></li>
+            <li><a href="profil.php">Votre profil</a></li>
             <li><a href="deconnexion.php">Déconnexion</a></li>
           </ul>
         </li>
@@ -47,10 +46,6 @@ if ($_SESSION['idConnexion']!=0){
     <script src="/www/js/bootstrap.min.js"></script>
 </html>
 <?php
-=======
-  include('menu.php');
-
->>>>>>> ee1e6544d4d526e2cfda6e74879e1a87f50f072a
 }else{
   header("Location: index.php");
 }

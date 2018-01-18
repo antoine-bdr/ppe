@@ -83,3 +83,8 @@ $bdd = new PDO('mysql:host=localhost;dbname=e4;charset=utf8', 'root', ''); //con
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/www/js/bootstrap.min.js"></script>
 </html>
+=======
+<?php 
+include('menu.php');
+?>
+>>>>>>> ee1e6544d4d526e2cfda6e74879e1a87f50f072a

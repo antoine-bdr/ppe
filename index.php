@@ -21,6 +21,7 @@ catch (Exception $e)
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <title>Projet PPE</title>
     </head>
 <body>
@@ -41,7 +42,8 @@ if (isset($_GET['error'])){
     <label for="mdp">Mot de passe :</label>
     <input required = "required" type="password" class="form-control" name="mdp">
   </div>
-  <button type="submit" class="btn btn-md" name="connexion"> Se connecter</button>
+  
+  <button type="submit" class="btn btn-md" name="connexion" id="boutonConnexion"> Se connecter</button>
 </form>
 </body>
     <script src="/www/bootstrap/js/jquery.js"></script>
