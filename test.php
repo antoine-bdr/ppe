@@ -16,30 +16,7 @@ if ($_SESSION['idConnexion']!=0){
         <title>Projet PPE</title>
     </head>
 <body>
-  <!-- Menu de la page -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cash	Cash</a>
-    </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Accueil</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-      </ul>
-      <!-- Menu déroulant -->
-      <ul class="nav navbar-nav navbar-right">  
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="profil.php?id=<?php echo $_SESSION['id_connexion']; ?>">Votre profil</a></li>
-            <li><a href="deconnexion.php">Déconnexion</a></li>
-          </ul>
-        </li>
-      </ul>
-  </div>
-</nav>
+  <?php include('menu/menu.php'); ?>
 </body>
     <script src="/www/bootstrap/js/jquery.js"></script>
     <script src="/www/bootstrap/js/bootstrap.min.js"></script>
@@ -47,8 +24,6 @@ if ($_SESSION['idConnexion']!=0){
     <script src="/www/js/bootstrap.min.js"></script>
 </html>
 <?php
-
-  include('menu.php');
 
 }else{
   header("Location: index.php");

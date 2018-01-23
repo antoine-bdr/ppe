@@ -1,73 +1,88 @@
-<html>
-    <head>
-        <!-- En-tête de la page -->
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="index.css" />
-        <link href="/www/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-        <title>Projet PPE</title>
-    </head>
-<body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                    <a class="navbar-brand" href="accueil.php" style="color:orange">Bienvenue sur CashCash</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                    <?php
+                    if ($_SESSION['id_droit'] == 3 || $_SESSION['id_droit'] == 1) {
+                    ?>
+                    <li style="text-align: center" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title=Gérez vos commandes Ici !">Intervention affecté
+                    </li>
+                    <?php
+                    }
 
-  <!-- Menu des pages-->
+                    if ($_SESSION['id_droit'] == 2 || $_SESSION['id_droit'] == 1) {
+                    ?>
+                        <li style="text-align: center" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title=GérezvoscommandesIci !">Verger
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li style="text-align: center"><a href="verger.php">Ajouter un verger</a></li>
+                                <li style="text-align: center"><a href="consultVerger.php">Consulter ces verger</a></li> 
+                            </ul>
+                    </li>
+                    <?php
+                    }
 
-  <!-- Menu de la page -->
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cash Cash</a>
-    </div>
-      <ul class="nav navbar-nav">
-
-       <?php
-         if ($_SESSION['id_droit'] == 3 || $_SESSION['id_droit'] == 1) {
-         ?>
-
-       
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fiche client
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="rechercheclient.php">Rechercher une fiche client</a></li>
-            <li><a href="listeclient.php">Liste des clients</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Liste des visites</a></li>
-        <li><a href="#">Interventions</a></li>
-        <li><a href="#">Statistiques</a></li>
-      </ul>
-
-
-        <ul class="nav navbar-nav">
-       <?php
-         if ($_SESSION['id_droit'] == 2 || $_SESSION['id_droit'] == 1) {
-         ?>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interventions affectées
-          <span class="caret"></span></a>
-        </li>
-      </ul>
-
-
-      <ul class="nav navbar-nav navbar-right">  
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="profil.php">Votre profil</a></li>
-            <li><a href="deconnexion.php">Déconnexion</a></li>
-          </ul>
-        </li>
-      </ul>
-  </div>
-</nav>
-</body>
-    <script src="/www/bootstrap/js/jquery.js"></script>
-    <script src="/www/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/www/js/bootstrap.min.js"></script>
-</html>
+                    if ($_SESSION['id_droit'] == 4 || $_SESSION['id_droit'] == 1) {
+                    ?>
+                        <li style="text-align: center" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title=Gérez vos commandes Ici !">Lot
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li style="text-align: center"><a href="ajoutLot.php">Ajouter un lot</a></li>
+                                <li style="text-align: center"><a href="consultLot.php">Consulter les lots</a></li> 
+                            </ul>
+                    </li>
+                    <?php
+                    }
+                    if ($_SESSION['id_droit'] == 4){
+                    ?>
+                    <li style="text-align: center"><a href="consultVergerAgrur.php">Verger</a></li> 
+                    <li style="text-align: center"><a href="consultCommandesAgrur.php">Voir les commandes</a></li> 
+                    <?php
+                    }
+                    if ($_SESSION['id_droit'] == 1) {
+                    ?>
+                    <li style="text-align: center" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title=Gérez vos commandes Ici !">Producteurs
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li style="text-align: center"><a href="voirProducteursAdmin.php">Voir tous les producteurs</a></li> 
+                                <li style="text-align: center"><a href="ajoutProducteursAdmin.php">Ajouter un producteur</a></li> 
+                            </ul>
+                    </li>
+                    <?php
+                    }
+                    ?>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="text-align: center; color: darkseagreen"><span class="glyphicon glyphicon-log-in"></span> Profil de <?php echo $_SESSION['login']; ?> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <?php
+                    if ($_SESSION['id_droit'] == 2) {
+                    ?>
+                        <li style="text-align: center"><a href="profil.php?id=<?php echo $_SESSION['id_connexion']; ?>">Mon profil</a></li>
+                    <?php 
+                    }elseif ($_SESSION['id_droit'] == 3) {
+                    ?>
+                        <li style="text-align: center"><a href="profilClient.php?id=<?php echo $_SESSION['id_connexion']; ?>">Mon profil</a></li>
+                    <?php
+                    }
+                    ?>
+                        <li style="text-align: center"><a href="deconnexion.php">Déconnexion</a></li> 
+                    </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
