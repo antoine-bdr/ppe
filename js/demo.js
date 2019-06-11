@@ -1,3 +1,0 @@
-$(function(){
-	$("#boutonConnexion").animate({fast});
-});
